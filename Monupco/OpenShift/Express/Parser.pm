@@ -1,4 +1,4 @@
-package Monupco::Parser;
+package Monupco::OpenShift::Express::Parser;
 
 use Pod::Simple;
 @ISA = qw(Pod::Simple);
