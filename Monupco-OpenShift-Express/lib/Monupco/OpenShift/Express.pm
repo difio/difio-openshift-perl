@@ -33,7 +33,8 @@ my $data = {
 my $pod_parsed = "";
 my $parser = Monupco::OpenShift::Express::Parser->new();
 $parser->output_string( \$pod_parsed );
-$parser->parse_file("$ENV{'OPENSHIFT_DATA_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
+#$parser->parse_file("$ENV{'OPENSHIFT_DATA_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
+$parser->parse_file("perllocal.pod");
 
 my @installed;
 foreach my $nv (split(/\n/, $pod_parsed)) {
