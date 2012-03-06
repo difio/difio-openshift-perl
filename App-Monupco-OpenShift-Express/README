@@ -25,7 +25,9 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah
+  JSON
+  POD::Simple
+  LWP::UserAgent
 
 COPYRIGHT AND LICENCE
 

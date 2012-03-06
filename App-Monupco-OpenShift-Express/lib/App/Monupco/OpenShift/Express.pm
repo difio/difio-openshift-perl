@@ -6,12 +6,12 @@
 #
 #####################################################################################
 
-package Monupco::OpenShift::Express;
+package App::Monupco::OpenShift::Express;
 our $VERSION = '0.01';
 our $NAME = "monupco-openshift-express-perl";
 
-use Monupco::OpenShift::Express::Parser;
-@ISA = qw(Monupco::OpenShift::Express::Parser);
+use App::Monupco::OpenShift::Express::Parser;
+@ISA = qw(App::Monupco::OpenShift::Express::Parser);
 
 use strict;
 use warnings;
@@ -33,8 +33,7 @@ my $data = {
 my $pod_parsed = "";
 my $parser = Monupco::OpenShift::Express::Parser->new();
 $parser->output_string( \$pod_parsed );
-#$parser->parse_file("$ENV{'OPENSHIFT_DATA_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
-$parser->parse_file("perllocal.pod");
+$parser->parse_file("$ENV{'OPENSHIFT_DATA_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
 
 my @installed;
 foreach my $nv (split(/\n/, $pod_parsed)) {
