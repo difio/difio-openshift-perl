@@ -75,7 +75,7 @@ Monupco::OpenShift::Express - monupco.com registration agent for OpenShift Expre
 =head1 DESCRIPTION
 
 This module compiles a list of locally installed Perl distributions and sends it to
-http://monupco.com where you check your application statisticand available updates.
+http://monupco.com where you check your application statistic and available updates.
 
 =head1 AUTHOR
 
