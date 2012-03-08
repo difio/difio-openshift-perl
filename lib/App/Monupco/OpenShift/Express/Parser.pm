@@ -1,3 +1,9 @@
+#####################################################################################
+#
+# Copyright (c) 2012, Alexander Todorov <atodorov()otb.bg>. See POD section.
+#
+#####################################################################################
+
 package App::Monupco::OpenShift::Express::Parser;
 
 use Pod::Simple;
