@@ -9,5 +9,5 @@ WriteMakefile(
     'LICENSE'         => 'MIT',
     PREREQ_PM         => {JSON => 0, LWP::UserAgent => 0}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-       AUTHOR         => 'Alexander Todorov <atodorov@otb.bg>') : ()),
+       (AUTHOR         => 'Alexander Todorov <atodorov@otb.bg>') : ()),
 );
