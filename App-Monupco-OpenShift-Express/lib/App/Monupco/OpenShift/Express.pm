@@ -66,21 +66,16 @@ __END__
 
 =head1 NAME
 
-Monupco::OpenShift::Express - Perl extension for blah blah blah
+Monupco::OpenShift::Express - monupco.com registration agent for OpenShift Express / Perl applications
 
 =head1 SYNOPSIS
 
   use Monupco::OpenShift::Express;
-  blah blah blah
 
 =head1 DESCRIPTION
 
-Stub documentation for Monupco::OpenShift::Express, created by h2xs. It looks like the
-author of the extension was negligent enough to leave the stub
-unedited.
-
-Blah blah blah.
-
+This module compiles a list of locally installed Perl distributions and sends it to
+http://monupco.com where you check your application statisticand available updates.
 
 =head1 AUTHOR
 
