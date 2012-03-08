@@ -7,7 +7,7 @@ WriteMakefile(
     ABSTRACT          => 'monupco.com registration agent for OpenShift Express / Perl applications',
     VERSION_FROM      => 'lib/App/Monupco/OpenShift/Express.pm', # finds $VERSION
     'LICENSE'         => 'MIT',
-    PREREQ_PM         => {JSON => 0, LWP::UserAgent => 0}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {JSON => 0, LWP::UserAgent => 0, POD::Simple => 0},
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
        (AUTHOR         => 'Alexander Todorov <atodorov@otb.bg>') : ()),
 );
