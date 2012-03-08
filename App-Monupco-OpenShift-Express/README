@@ -20,7 +20,7 @@ DEPENDENCIES
 This module requires these other modules and libraries:
 
   JSON
-  POD::Simple
+  Pod::Simple
   LWP::UserAgent
 
 COPYRIGHT AND LICENCE
