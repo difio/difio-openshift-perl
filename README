@@ -28,7 +28,12 @@ To register your OpenShift Perl application to Monupco do the following:
     source $OPENSHIFT_REPO_DIR/data/MONUPCO_SETTINGS
     $OPENSHIFT_APP_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
 
-5) Then push your application to OpenShift
+5) Commit your changes
+
+        git add .
+        git commit -m "enable monupco registration"
+
+6) Then push your application to OpenShift
 
     git push
 
