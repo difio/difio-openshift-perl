@@ -1,5 +1,5 @@
-Monupco-OpenShift-Express version 0.01
-======================================
+Monupco-OpenShift-Express
+=========================
 
 monupco.com registration agent for OpenShift Express / Perl applications
 
@@ -19,7 +19,7 @@ To register your OpenShift Perl application to Monupco do the following:
     cd ./myapp/
     echo "App::Monupco::OpenShift::Express" >> deplist.txt
 
-3) Set your username and application name in the ./data/MONUPCO_SETTINGS file
+3) Set your userID in the ./data/MONUPCO_SETTINGS file
 
     echo "export MONUPCO_USER_ID=YourUserID"  > ./data/MONUPCO_SETTINGS
 

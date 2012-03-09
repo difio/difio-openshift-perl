@@ -7,7 +7,7 @@
 #####################################################################################
 
 package App::Monupco::OpenShift::Express;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 our $NAME = "monupco-openshift-express-perl";
 
 use App::Monupco::OpenShift::Express::Parser;
@@ -81,7 +81,7 @@ To register your OpenShift Perl application to Monupco do the following:
     cd ./myapp/
     echo "App::Monupco::OpenShift::Express" >> deplist.txt
 
-3) Set your username and application name in the ./data/MONUPCO_SETTINGS file
+3) Set your userID in the ./data/MONUPCO_SETTINGS file
 
     echo "export MONUPCO_USER_ID=YourUserID"  > ./data/MONUPCO_SETTINGS
 
