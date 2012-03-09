@@ -7,7 +7,7 @@
 #####################################################################################
 
 package App::Monupco::OpenShift::Express;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 our $NAME = "monupco-openshift-express-perl";
 
 use App::Monupco::OpenShift::Express::Parser;
