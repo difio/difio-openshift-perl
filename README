@@ -26,8 +26,8 @@ To register your OpenShift Perl application to Monupco do the following:
 4) Enable the registration script in .openshift/action_hooks/post_deploy
 
     source $OPENSHIFT_REPO_DIR/data/MONUPCO_SETTINGS
-    export PERL5LIB=$OPENSHIFT_APP_DIR/perl5lib/lib/perl5/
-    $OPENSHIFT_APP_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
+    export PERL5LIB=$OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/
+    $OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
 
 5) Commit your changes
 

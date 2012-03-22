@@ -7,7 +7,7 @@
 #####################################################################################
 
 package App::Monupco::OpenShift::Express;
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 our $NAME = "monupco-openshift-express-perl";
 
 use App::Monupco::OpenShift::Express::Parser;
@@ -21,10 +21,10 @@ use LWP::UserAgent;
 
 my $data = {
     'user_id'    => $ENV{'MONUPCO_USER_ID'},
-    'app_name'   => $ENV{'OPENSHIFT_APP_NAME'},
-    'app_uuid'   => $ENV{'OPENSHIFT_APP_UUID'},
-    'app_type'   => $ENV{'OPENSHIFT_APP_TYPE'},
-    'app_url'    => "http://$ENV{'OPENSHIFT_APP_DNS'}",
+    'app_name'   => $ENV{'OPENSHIFT_GEAR_NAME'},
+    'app_uuid'   => $ENV{'OPENSHIFT_GEAR_UUID'},
+    'app_type'   => $ENV{'OPENSHIFT_GEAR_TYPE'},
+    'app_url'    => "http://$ENV{'OPENSHIFT_GEAR_DNS'}",
     'app_vendor' => 0,   # Red Hat OpenShift Express
     'pkg_type'   => 400, # Perl / CPAN
     'installed'  => [],
@@ -33,7 +33,7 @@ my $data = {
 my $pod_parsed = "";
 my $parser = App::Monupco::OpenShift::Express::Parser->new();
 $parser->output_string( \$pod_parsed );
-$parser->parse_file("$ENV{'OPENSHIFT_APP_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
+$parser->parse_file("$ENV{'OPENSHIFT_GEAR_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
 
 my @installed;
 foreach my $nv (split(/\n/, $pod_parsed)) {
@@ -88,8 +88,8 @@ To register your OpenShift Perl application to Monupco do the following:
 4) Enable the registration script in .openshift/action_hooks/post_deploy
 
     source $OPENSHIFT_REPO_DIR/data/MONUPCO_SETTINGS
-    export PERL5LIB=$OPENSHIFT_APP_DIR/perl5lib/lib/perl5/
-    $OPENSHIFT_APP_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
+    export PERL5LIB=$OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/
+    $OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
 
 5) Commit your changes
 
