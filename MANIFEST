@@ -2,6 +2,6 @@ Changes
 Makefile.PL
 MANIFEST
 README
-t/App-Monupco-OpenShift-Express.t
-lib/App/Monupco/OpenShift/Express.pm
-lib/App/Monupco/OpenShift/Express/Parser.pm
+t/App-Monupco-OpenShift.t
+lib/App/Monupco/OpenShift.pm
+lib/App/Monupco/OpenShift/Parser.pm
