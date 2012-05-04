@@ -4,7 +4,7 @@
 #
 #####################################################################################
 
-package App::Monupco::OpenShift::Express::Parser;
+package App::Monupco::OpenShift::Parser;
 
 use Pod::Simple;
 @ISA = qw(Pod::Simple);

@@ -1,7 +1,7 @@
-Monupco-OpenShift-Express
-=========================
+App-Monupco-OpenShift
+=====================
 
-monupco.com registration agent for OpenShift Express / Perl applications
+monupco.com registration agent for OpenShift / Perl applications
 
 This module compiles a list of locally installed Perl distributions and sends it to
 http://monupco.com where you check your application statistics and available updates.
@@ -17,7 +17,7 @@ To register your OpenShift Perl application to Monupco do the following:
 2) Add a dependency in your deplist.txt file
 
     cd ./myapp/
-    echo "App::Monupco::OpenShift::Express" >> deplist.txt
+    echo "App::Monupco::OpenShift" >> deplist.txt
 
 3) Set your userID in the ./data/MONUPCO_SETTINGS file
 
@@ -27,7 +27,7 @@ To register your OpenShift Perl application to Monupco do the following:
 
     source $OPENSHIFT_REPO_DIR/data/MONUPCO_SETTINGS
     export PERL5LIB=$OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/
-    $OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
+    $OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift.pm
 
 5) Commit your changes
 

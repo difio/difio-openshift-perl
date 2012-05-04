@@ -6,12 +6,12 @@
 #
 #####################################################################################
 
-package App::Monupco::OpenShift::Express;
-our $VERSION = '0.08';
-our $NAME = "monupco-openshift-express-perl";
+package App::Monupco::OpenShift;
+our $VERSION = '0.09';
+our $NAME = "monupco-openshift-perl";
 
-use App::Monupco::OpenShift::Express::Parser;
-@ISA = qw(App::Monupco::OpenShift::Express::Parser);
+use App::Monupco::OpenShift::Parser;
+@ISA = qw(App::Monupco::OpenShift::Parser);
 
 use strict;
 use warnings;
@@ -25,13 +25,13 @@ my $data = {
     'app_uuid'   => $ENV{'OPENSHIFT_GEAR_UUID'},
     'app_type'   => $ENV{'OPENSHIFT_GEAR_TYPE'},
     'app_url'    => "http://$ENV{'OPENSHIFT_GEAR_DNS'}",
-    'app_vendor' => 0,   # Red Hat OpenShift Express
+    'app_vendor' => 0,   # Red Hat OpenShift
     'pkg_type'   => 400, # Perl / CPAN
     'installed'  => [],
 };
 
 my $pod_parsed = "";
-my $parser = App::Monupco::OpenShift::Express::Parser->new();
+my $parser = App::Monupco::OpenShift::Parser->new();
 $parser->output_string( \$pod_parsed );
 $parser->parse_file("$ENV{'OPENSHIFT_GEAR_DIR'}/perl5lib/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
 
@@ -66,7 +66,7 @@ __END__
 
 =head1 NAME
 
-App::Monupco::OpenShift::Express - monupco.com registration agent for OpenShift Express / Perl applications
+App::Monupco::OpenShift - monupco.com registration agent for OpenShift / Perl applications
 
 =head1 SYNOPSIS
 
@@ -79,7 +79,7 @@ To register your OpenShift Perl application to Monupco do the following:
 2) Add a dependency in your deplist.txt file
 
     cd ./myapp/
-    echo "App::Monupco::OpenShift::Express" >> deplist.txt
+    echo "App::Monupco::OpenShift" >> deplist.txt
 
 3) Set your userID in the ./data/MONUPCO_SETTINGS file
 
@@ -89,7 +89,7 @@ To register your OpenShift Perl application to Monupco do the following:
 
     source $OPENSHIFT_REPO_DIR/data/MONUPCO_SETTINGS
     export PERL5LIB=$OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/
-    $OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift/Express.pm
+    $OPENSHIFT_GEAR_DIR/perl5lib/lib/perl5/App/Monupco/OpenShift.pm
 
 5) Commit your changes
 
